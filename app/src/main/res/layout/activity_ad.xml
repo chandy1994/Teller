@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3198AE">
+
+
+    <ImageView
+        android:id="@+id/actor"
+        android:layout_marginLeft="40dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="30dp"
+        android:src="@mipmap/sun"/>
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="80sp"
+        android:textColor="@android:color/holo_orange_light"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:shadowRadius="3.0"
+        android:text="Teller"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:shadowRadius="3.0"
+        android:text="A small target"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="40dp"/>
+
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:shadowRadius="3.0"
+        android:text="A big success"
+        android:layout_gravity="center_horizontal"
+        android:gravity="right|center_vertical"
+        android:paddingEnd="40dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:src="@mipmap/buildings"/>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Teller</string>
+    <string name="d2">Mon.</string>
+    <string name="d3">Tue.</string>
+    <string name="d4">Wed.</string>
+    <string name="d5">Thu.</string>
+    <string name="d6">Fri.</string>
+    <string name="d7">Sat.</string>
+    <string name="d1">Sun.</string>
+</resources>

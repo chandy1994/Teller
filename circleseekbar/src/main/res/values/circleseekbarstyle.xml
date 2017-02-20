@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="CircleSeekBar">
+        <attr name="android:thumb" />
+        <attr name="progress_width" format="dimension" />
+        <attr name="progress_background" format="color" />
+        <attr name="progress_front" format="color" />
+        <attr name="progress_max" format="integer" />
+        <attr name="thumbSize" format="dimension"/>
+    </declare-styleable>
+</resources>

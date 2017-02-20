@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="frag"
+            type="com.softwareproject.chandy.teller.Fragment.HistoryFragment">
+        </variable>
+
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainColor">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/sun"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/sun"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:onClick="@{frag.sunAnimation}"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@mipmap/buildings"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="历史记录"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="16dp"
+                android:src="@mipmap/toleft"
+                android:onClick="@{frag.toPrevious}"/>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:text="@{frag.dateField}"/>
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="16dp"
+                android:src="@mipmap/toright"
+                android:onClick="@{frag.toNext}"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/historycontainer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/time_1tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="总时间" />
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="140dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="200"
+                    android:id="@+id/day_1pb"
+                    android:layout_marginRight="50dp"
+                    android:progressDrawable="@drawable/pb_style_1"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/day_1tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/d1" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@android:color/transparent">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/time_2tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="总时间" />
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="140dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="200"
+                    android:id="@+id/day_2pb"
+                    android:layout_marginRight="50dp"
+                    android:progressDrawable="@drawable/pb_style_2"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/day_2tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/d2" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/time_3tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="总时间" />
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="140dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="200"
+                    android:id="@+id/day_3pb"
+                    android:layout_marginRight="50dp"
+                    android:progressDrawable="@drawable/pb_style_3"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/day_3tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/d3" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/time_4tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="总时间" />
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="140dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="200"
+                    android:id="@+id/day_4pb"
+                    android:layout_marginRight="50dp"
+                    android:progressDrawable="@drawable/pb_style_4"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/day_4tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/d4" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/time_5tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="总时间" />
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="140dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="200"
+                    android:id="@+id/day_5pb"
+                    android:layout_marginRight="50dp"
+                    android:progressDrawable="@drawable/pb_style_5"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/day_5tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/d5" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/time_6tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="总时间" />
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="140dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="200"
+                    android:id="@+id/day_6pb"
+                    android:layout_marginRight="50dp"
+                    android:progressDrawable="@drawable/pb_style_6"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/day_6tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/d6" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/time_7tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="总时间" />
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="140dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="200"
+                    android:id="@+id/day_7pb"
+                    android:layout_marginRight="50dp"
+                    android:progressDrawable="@drawable/pb_style_7"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/day_7tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/d7" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
